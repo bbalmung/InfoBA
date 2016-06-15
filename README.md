@@ -3,8 +3,9 @@
 Repositorio del proyecto InfoBA, perteneciente al grupo #6.
 
 # Carpetas 
-  +Src : código fuente de la aplicación.
-  +Docs: documentación de la aplicación.
+
+  + Src : código fuente de la aplicación.  
+  + Docs: documentación de la aplicación.
 
 # Instrucciones para correr el proyecto. 
 
