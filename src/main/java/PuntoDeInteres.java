@@ -33,14 +33,13 @@ public abstract class PuntoDeInteres
    // Tiene nombre y esta geolocalizado (?)
    public Boolean esValido()
    {
-     return true;
+     return ((Nombre!=null) && !Nombre.isEmpty()&& (Coordenadas!= null));
    }
 
     // TODO: implementar. ¿Que hace esto?
-
     public String getInfo()
     {
-        return "info";
+        return "Info.";
     }
 
 }
