@@ -1,4 +1,4 @@
-public abstract class PointOfInterest
+public abstract class PuntoDeInteres
 {
    public String Nombre;
    public Direccion Direccion;
@@ -10,7 +10,7 @@ public abstract class PointOfInterest
    //¿Que hace tags?
    //public string [] tags;
 
-   public PointOfInterest(String nombre, Direccion direccion, Coordenadas coordenadas)
+   public PuntoDeInteres(String nombre, Direccion direccion, Coordenadas coordenadas)
    {
      this.Nombre = nombre;
      this.Direccion = direccion;
@@ -18,13 +18,13 @@ public abstract class PointOfInterest
    }
 
    // TODO: implementar.
-   public Number distancia(PointOfInterest poi)
+   public Number distancia(PuntoDeInteres poi)
    {
        return 0;
    }
 
    // TODO: implementar.
-   public Boolean distanciaMenorA(Number metros, PointOfInterest poi)
+   public Boolean distanciaMenorA(Number metros, PuntoDeInteres poi)
    {
        return false;
    }
