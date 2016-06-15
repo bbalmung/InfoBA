@@ -9,7 +9,7 @@ public class HelloWorld
        direccion.Numero = 2400;
        direccion.CodigoPostal = "1580";
 
-       Coordenadas coordenadas = new Coordenadas(57, 25);
+       Coordenadas coordenadas = new Coordenadas(57.0, 25.0);
 
        PuntoDeInteres POI = new Banco("Banco UTN", direccion, coordenadas);
 

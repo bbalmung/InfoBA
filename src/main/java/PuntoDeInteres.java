@@ -30,7 +30,7 @@ public abstract class PuntoDeInteres
    }
 
    // TODO: implementar.
-   // Tiene nombre y esta geolocalizado (?)
+   // Tiene nombre y esta geolocalizado (tiene coordenadas)
    public Boolean esValido()
    {
      return ((Nombre!=null) && !Nombre.isEmpty()&& (Coordenadas!= null));
