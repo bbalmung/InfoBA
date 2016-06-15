@@ -11,4 +11,5 @@ public class Direccion
     public Localidad Localidad;
     public Provincia Provincia;
     public Pais Pais;
+
 }

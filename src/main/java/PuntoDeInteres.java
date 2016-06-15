@@ -37,11 +37,10 @@ public abstract class PuntoDeInteres
    }
 
     // TODO: implementar. ¿Que hace esto?
-    /*
+
     public String getInfo()
     {
         return "info";
     }
-    */
 
 }
