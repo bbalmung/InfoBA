@@ -9,6 +9,11 @@ public class Coordenadas
       this.Longitud = longitud;
    }
 
+   /*
+    * Calcula la distancia de una coordenada con otra.
+    * OtraCoordenada: juego de coordenadas.
+    * @returns: distancia entre las dos coordenadas (en metros).
+    */
    public Double distanciaCon(Coordenadas OtraCoordenada)
    {
 
