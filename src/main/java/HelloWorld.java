@@ -9,10 +9,15 @@ public class HelloWorld
        direccion.Numero = 2400;
        direccion.CodigoPostal = "1580";
 
-       Coordenadas coordenadas = new Coordenadas(57.0, 25.0);
+       Coordenadas coordenadas = new Coordenadas(-34.605198, -58.384569);
+       Coordenadas coordenadas2 = new Coordenadas(-50.342923, -72.389858);
 
-       PuntoDeInteres POI = new Banco("Banco UTN", direccion, coordenadas);
+       Double dist = coordenadas2.distanciaCon(coordenadas2);
 
-       get("/hello", (req, res) -> POI.getInfo());
+       String desc = "Distancia entre (-34.605198, -58.384569) y (-50.342923, -72.389858) es: " + dist.toString() + ".";
+       
+       PuntoDeInteres POI = new Banco(null, null, null);
+
+       get("/hello", (req, res) -> desc);
    }
 }
