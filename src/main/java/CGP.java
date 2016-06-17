@@ -6,4 +6,8 @@ public class CGP extends PuntoDeInteres
         super(nombre, direccion, coordenadas);
     }
 
+    /*
+     * TODO: Los CGP cumplen la condición de cercanía, si su coordenada está dentro de la zona
+     * delimitada por la comuna.
+     */
 }
