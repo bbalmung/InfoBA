@@ -4,7 +4,6 @@ public abstract class PuntoDeInteres
    public Direccion Direccion;
    public Coordenadas Coordenadas;
 
-   // Si es un kiosko, parada de colectivos, etc...
    public String Descripcion;
 
    //¿Que hace tags?... Por ahora nada
@@ -17,27 +16,26 @@ public abstract class PuntoDeInteres
      this.Coordenadas = coordenadas;
    }
 
-   // TODO: implementar.
-   public Number distancia(PuntoDeInteres poi)
+   public Boolean distanciaMenorA(Double metros, PuntoDeInteres otroPunto)
    {
-       return 0;
+       Double distancia = this.Coordenadas.distanciaCon(otroPunto.Coordenadas);
+
+       return (distancia < metros);
    }
 
-   // TODO: implementar.
-   public Boolean distanciaMenorA(Number metros, PuntoDeInteres poi)
-   {
-       return false;
-   }
-
-   // TODO: implementar.
    // Tiene nombre y esta geolocalizado (tiene coordenadas)
    public Boolean esValido()
    {
      return ((Nombre!=null) && !Nombre.isEmpty()&& (Coordenadas!= null));
    }
 
-    // TODO: implementar. ¿Que hace esto?
-    public String getInfo()
+   public Boolean cercaDe(PuntoDeInteres otroPunto)
+   {
+      return distanciaMenorA(5.0, otroPunto);
+   }
+
+   // TODO: implementar. ¿Que hace esto?
+   public String getInfo()
     {
         return "Info.";
     }
