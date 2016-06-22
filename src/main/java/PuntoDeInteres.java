@@ -7,8 +7,8 @@ public abstract class PuntoDeInteres
    // Si es un kiosko, parada de colectivos, etc...
    public String Descripcion;
 
-   //¿Que hace tags?
-   //public string [] tags;
+   //¿Que hace tags?... Por ahora nada
+   public Collection<Tag> tags;
 
    public PuntoDeInteres(String nombre, Direccion direccion, Coordenadas coordenadas)
    {
@@ -42,4 +42,8 @@ public abstract class PuntoDeInteres
         return "Info.";
     }
 
+    public Boolean buscarTexto(String texto)
+    {
+    	return false;
+    }
 }
