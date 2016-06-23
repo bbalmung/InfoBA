@@ -1,19 +1,21 @@
+package main.java;
+
+import java.util.HashSet;
+
 public abstract class PuntoDeInteres
 {
    public String Nombre;
    public Direccion Direccion;
    public Coordenadas Coordenadas;
-
    public String Descripcion;
-
-   //¿Que hace tags?... Por ahora nada
-   public Collection<Tag> tags;
+   private HashSet<String> Tags; 
 
    public PuntoDeInteres(String nombre, Direccion direccion, Coordenadas coordenadas)
    {
      this.Nombre = nombre;
      this.Direccion = direccion;
      this.Coordenadas = coordenadas;
+     this.Tags = new HashSet<String>();
    }
 
    public Boolean distanciaMenorA(Double metros, PuntoDeInteres otroPunto)
@@ -39,9 +41,25 @@ public abstract class PuntoDeInteres
     {
         return "Info.";
     }
+   
+   public void agregarTag(String tag){
+	   Tags.add(tag);
+   }
+   
+   public void sacarTag(String tag){
+	   Tags.remove(tag);
+   }
+   
+   public Boolean buscarTexto(String texto){
+	   return (Tags.contains(texto) || this.Nombre.contains(texto) || this.buscarServicios(texto) || this.buscarRubros(texto) );
+   }
+   
+   public boolean buscarServicios(String texto){
+	   return false;
+   }
+   
+   public boolean buscarRubros(String texto){
+	   return false;
+   }
 
-    public Boolean buscarTexto(String texto)
-    {
-    	return false;
-    }
 }

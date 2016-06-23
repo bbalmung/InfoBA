@@ -1,4 +1,5 @@
-public class Administrador
-{
+package main.java;
+
+public class Administrador {
 	
 }

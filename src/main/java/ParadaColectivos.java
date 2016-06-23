@@ -1,3 +1,4 @@
+package main.java;
 public class ParadaColectivos extends PuntoDeInteres
 {
     public ParadaColectivos(String nombre, Direccion direccion, Coordenadas coordenadas)

@@ -1,23 +1,46 @@
-public class repositrio
+package main.java;
+import java.util.Collection;
+import java.util.HashSet;
+
+public class Repositorio
 {
-	public Collection<PuntosDeInteres> puntosDeInteres;
-	public Collection<Administrador> administradores;
-	public Estadisticas estadisticas;
+	private HashSet<PuntoDeInteres> PuntosDeInteres;
+	private HashSet<Administrador> Administradores;
 	
-	public agregarPuntoDeInteres(PuntoDeInteres poi)
-	{
-		this.puntosDeInteres().add(poi);
+	public Repositorio(){
+		PuntosDeInteres = new HashSet<PuntoDeInteres>();
+		Administradores = new HashSet<Administrador>();
 	}
 	
-	public Collection<PuntosDeInteres> buscarPuntoDeInteres(String texto)
-	{
-		Collection<PuntosDeInteres> poisADevolver;
-		for (PuntoDeInteres poi : this.puntosDeInteres())
-		{
-			if poi.buscarTexto(texto)
-			{
-				poisADevolver.add(poi);
+	public void agregarPuntoDeInteres(PuntoDeInteres puntoDeInteres){
+		this.PuntosDeInteres.add(puntoDeInteres);
+	}
+	
+	public void eliminarPuntoDeInteres(PuntoDeInteres puntoDeInteres){
+		this.PuntosDeInteres.remove(puntoDeInteres);
+	}
+	
+	public Collection<PuntoDeInteres> buscarPuntoDeInteresPorTexto(String texto){
+		HashSet<PuntoDeInteres> puntosDeInteres;
+		puntosDeInteres = new HashSet<PuntoDeInteres>();
+		
+		for(PuntoDeInteres poi : PuntosDeInteres){
+			if(poi.buscarTexto(texto)){
+				puntosDeInteres.add(poi);
 			}
 		}
+		return puntosDeInteres;
+	}
+	
+	public Boolean login(String usuario, String password){
+		return false;
+	}
+	
+	public void agregarAdministrador(Administrador admin){
+		Administradores.add(admin);
+	}
+	
+	public void eliminarAdministrador(Administrador admin){
+		Administradores.remove(admin);
 	}
 }
