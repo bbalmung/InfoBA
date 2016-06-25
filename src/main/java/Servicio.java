@@ -27,7 +27,13 @@ public class Servicio {
 	}
 	public boolean estoyDisponible(Date tiempo) {
 		
-		return this.DisponibilidadesHoraria.stream().anyMatch(hor -> hor.coincideTiempo(tiempo));
+		for (DisponibilidadHoraria s : DisponibilidadesHoraria) {
+		    if(s.coincideTiempo(tiempo))
+		    {
+		    	return true;
+		    }
+		}
+		return false;
 	}
 
 }
